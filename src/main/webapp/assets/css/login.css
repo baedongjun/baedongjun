@@ -1,0 +1,159 @@
+body, table, tr, td {
+	margin : 0;
+	padding-top: 25px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color : white;
+	background-image:url('/assets/img/login_img1.jpg');
+	text-align: left;
+	background-color: #fff;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+	box-shadow: 0 0 0 0px;
+}
+input:checked + label {
+	background-color:transparent;
+}
+a:link {
+	text-decoration: none;
+	color: yellow;
+	background-color: transparent;
+	font-weight: bold;
+}
+
+.text-center {
+	text-align: center!important;
+}
+
+.card {
+	margin: 0 auto; /* Added */
+	float: none; /* Added */
+	box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.15);
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0,0,0,.125);
+	border-radius: .25rem;
+}
+
+.card-body {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	padding: 1.25rem;
+}
+
+.form-signin .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+	background-color:#f2f2f2;
+}
+
+input::placeholder {
+	color: #b5bab6 !important;
+}
+
+input::-webkit-input-placeholder {
+	color: #b5bab6 !important;
+}
+
+input:-ms-input-placeholder {
+	color: #b5bab6 !important;
+}
+
+input:focus {
+	outline:none;
+	box-shadow: 0 0 0 2px #6698cb;
+}
+
+button, input {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.btn {
+	display: block;
+	width: 100%;
+	border: 1px solid transparent;
+	padding: .5rem 1rem;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	border-radius: .3rem;
+	color: #fff;
+	background-color: #6698cb;
+	border-color: #6698cb;
+}
+
+.btn:hover {
+	color: #fff;
+	background-color: gray;
+	border-color: gray;
+}
+
+.btn:not(:disabled):not(.disabled) {
+	cursor: pointer;
+}
+
+.h5, h5 {
+	font-size: 1.25rem;
+}
+
+h2, h5 {
+	margin-top: 0;
+	margin-bottom: .5rem;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.2;
+	color: inherit;
+}
+
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: .5rem;
+}
+
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	border-top: 1px solid rgba(0,0,0,.1);
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}

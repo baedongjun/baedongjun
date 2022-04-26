@@ -1,0 +1,398 @@
+/*
+CSS 우선순위
+
+1. 속성 값 뒤에 !important 를 붙인 속성
+2. HTML에서 style을 직접 지정한 속성
+3. #id 로 지정한 속성
+4. 클래스, :추상클래스 로 지정한 속성
+5. 태그이름 으로 지정한 속성
+6. 상위 객체에 의해 상속된 속성
+7. 같은 우선 순위에 있는 경우, 부모-자식 관계가 많은 경우가 우선되며, 모든 설정이 같은 경우 나중에 선언한 것이 우선
+*/
+
+body, textarea {
+	font-size: 13px;
+	color: black;
+	font-family: "맑은 고딕",돋움;
+	height:100%;
+	margin:0;
+	margin-right: 10px;
+	line-height:150%;
+}
+
+h4{
+	font-size:21px;
+	font-weight: bold;
+}
+/*소제목등 사용*/
+.title0 {
+	font-size: 20px;
+	font-weight: bold;
+	color:black;
+}
+.title {
+	font-size: 16px;
+	font-weight: bold;
+	color:#7d7d7d;
+}
+.title2 {
+	font-size: 14px;
+	font-weight: bold;
+	color:blue;
+}
+.title2R {
+	font-size: 14px;
+	font-weight: bold;
+	color:red;
+}
+
+
+
+
+
+
+
+.info_border {
+	list-style-type:square;
+	margin-bottom: 15px;
+	padding-left: 25px;
+	color: red;
+}
+
+/*리스트상 등록 ex 엑셀업로드*/
+.input_border {
+	width:100%;
+	padding:3px;
+	border:solid 10px #f0d264;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	display:table;
+}
+
+.search_border {
+	border-top:solid 10px #383e47;
+	border-left:solid 10px #383e47;
+	border-right:solid 10px #383e47;
+	border-bottom:0px;
+	box-sizing: border-box;
+	/*overflow:auto;*/
+	/*overflow-y:hidden;*/
+	/*overflow-x:hidden;*/
+
+}
+.search_border table {table-layout: fixed;border-spacing: 2px;}
+.search_border th {width:140px;min-width: 100px;}
+
+.red{color: red}
+.green{color: green}
+
+
+
+/*하단 버튼 구역*/
+.button_border {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+form {
+	margin:0px;
+}
+
+input, select, textarea, iframe {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+iframe {
+	margin:3px 0;
+}
+
+textarea{
+	border:1px solid #e6e6e6;
+	background-color:#f2f2f2;
+	line-height:130%;
+	width:100%;
+	margin-bottom:-3px;
+}
+
+
+input{
+	border:1px solid #e6e6e6;
+	background-color:#f2f2f2;
+	vertical-align:middle;
+}
+.input {width:100%}
+
+input[type="text"] {
+	height:22px;
+}
+
+input[type="checkbox"], input[type="radio"]{
+	margin: 0px;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+	box-shadow: 0 0 0 3px #ffdd00;
+}
+
+input:checked + label {
+	background-color:#ffdd00
+}
+
+.chk_on {background-color: #ffdd00}
+.chk_off {background-color:#FFFFFF}
+
+input[type="button"], input[type="submit"] {
+	font-weight: bold;
+	padding: 2px 13px;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom-color: rgba(0,0,0,0.34);
+	background: #6698cb;
+	color: #FFFFFF;
+	cursor: pointer;
+	height:auto;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.34) inset,
+	0 1px 0 -1px rgba(0,0,0,0.13),
+	0 2px 0 -1px rgba(0,0,0,0.08),
+	0 2px 12px -1px rgba(0,0,0,0.21);
+}
+
+input[type="file"]::-webkit-file-upload-button{
+	padding:0 5px 0 5px;
+	font-size:12px;
+}
+
+/*추가 색상의 버튼 */
+input[type="button"].red{background: #fa5a5a;color: #FFFFFF;}
+input[type="button"].yellow{background: #f0d264;color: #000000;}
+input[type="button"].gray{background: #cccccc;color: #000000;}
+input[type="submit"].yellow{background: #f0d264;color: #000000;}
+input[type="submit"].red{background: #fa5a5a;color: #FFFFFF;}
+
+input[type="button"]:hover, input[type="submit"]:hover, input[type="file"]:hover{
+	background: #656565;
+	color: #FFFFFF
+}
+
+input[type="button"].red:hover, input[type="button"].yellow:hover, input[type="button"].gray:hover{
+	background: #656565;
+	color: #FFFFFF
+}
+
+input[type="number"] {width:50px}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/*입력폼이지만, 텍스트 처럼 보이는게 할때 사용 */
+.null {
+	border:0px solid #ffffff;
+	background-color:transparent;
+}
+.null_input {/*세로 정렬이 필요할때*/
+	border:0px solid #ffffff;
+	background-color:transparent;
+	height:15px;
+}
+
+/*width가 100% 필요시*/
+select {
+	border:1px solid #b3b3b3;
+	vertical-align:middle;
+	border-style:solid;
+	height:23px;
+}
+.select {
+	width:100%;
+}
+select option[selected] {
+	 background-color:#ffdd00;
+}
+
+
+a:link {
+	text-decoration: none;
+	color: #7b0035;
+	background-color: #ffe6eb;
+	font-weight: bold;
+}
+a:visited {
+	text-decoration: none;
+	color: gray;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: none;
+	color: red;
+	font-weight: bold;
+}
+a:active {
+	text-decoration: none;
+	color: red;
+	font-weight: bold;
+}
+
+th{
+	text-align: center;
+	background: #656e7d;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding:3px;
+}
+
+/*선이 필요한 테이블*/
+.tbl{
+	width: 100%;
+	border:0px;
+	border-spacing: 1px;
+	background-color:#d0d0d0;
+	margin-bottom: 20px;
+}
+.tbl th{
+	outline:solid 1px #d0d0d0;
+	width:140px;
+	min-width: 100px;
+}
+.tbl > thead > tr:nth-child(1) > th {
+	position: sticky;
+	top: 0;
+}
+.tbl > thead > tr:nth-child(2) > th {
+	position: sticky;
+	top: 26px;
+}
+.tbl > thead > tr:nth-child(3) > th {
+	position: sticky;
+	top: 52px;
+}
+.tbl td{
+	background-color:#FFFFFF;
+	padding:3px;
+}
+
+/*tbl 서브 테이블*/
+.tbl_sub {
+	font-size:0.75rem;
+	border:0px;
+	border-spacing: 1px;
+	background-color: #a1a1a1;
+}
+.tbl_sub caption {font-size:0.7rem}
+.tbl_sub th{
+	font-weight:normal;
+	color:black;
+	outline:solid 1px #a1a1a1;
+	background: #b7c7e2;
+	width:initial;
+	padding:initial;
+	padding:1px 3px;
+}
+.tbl_sub > thead > tr:nth-child(1) > th {
+	position: sticky;
+	top: 0px;
+}
+.tbl_sub > thead > tr:nth-child(2) > th {
+	position: sticky;
+	top: 22px;
+}
+.tbl_sub > thead > tr:nth-child(3) > th {
+	position: sticky;
+	top: 44px;
+}
+
+.tbl_sub td {
+	background-color:#FFFFFF;
+	padding:initial;
+	padding:1px 3px;
+}
+
+/*예시 테이블 : ex) 엑셀데이터 양식..등 */
+.tbl_ex{
+	border:0px;
+	font-size: 0.7rem;
+	border-spacing: 1px;
+	background-color:black;
+}
+.tbl_ex caption {font-size:0.7rem}
+.tbl_ex th {
+	width:initial;
+	background-color:#a0a0a0;
+	padding:initial;
+	padding:1px 3px;
+}
+.tbl_ex td{
+	background-color:#FFFFFF;
+	padding:initial;
+	padding:1px 3px;
+}
+
+
+/*합계, 소계 Row에 사용 우선적으로 th로 적용해야함.*/
+.total1 th, .total1{
+	background-color:black;
+	color:#FFFFFF;
+}
+.total2 th , .total2{
+	background-color:#585858;
+	color:#FFFFFF;
+}
+.total3 th, .total3{
+	background-color:#BEBEBE;
+	color:#FFFFFF;
+}
+
+.total4 th, .total4{
+	background-color:#f9f9f9;
+	color:gray;
+}
+
+/* th,td에 넣을 정도의 내용이 아닌 경우 */
+.tag {
+	background-color: rgba(255, 123, 229, 0.38);
+	font-size:8pt;
+	padding:0 2px 0 2px;
+}
+
+
+
+/* pq-grid themes 처럼 보이게 한 스타일 */
+.tbl_pq {
+	font-size: 13px;
+	font-family: "맑은 고딕", 돋움;
+	width: 100%;
+	border-spacing: 1px;
+	background-color: #d7d7d7;
+	margin-bottom: 20px;
+	white-space: nowrap;
+}
+.tbl_pq th {
+	padding: 5px;
+	border-color: #d7d7d7;
+	text-align: center;
+	background: #656e7d;
+	color: #FFFFFF;
+}
+.tbl_pq th:hover {
+	background: #383e47;
+}
+
+.tbl_pq tr:nth-child(odd) {
+	background: #f9f9f9;
+}
+.tbl_pq tr:nth-child(even) {
+	background: #FFFFFF;
+}
+
+.tbl_pq td {
+	padding: 5px;
+}
+
+.tbl_pq > thead > tr:nth-child(1) > th {
+	position: sticky;
+	top: 0px;
+}
+
+

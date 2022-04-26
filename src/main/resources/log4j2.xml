@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN">
+	<!--ALL > TRACE > DEBUG > INFO > WARN > ERROR > FATAL > OFF-->
+
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="[%level] :: %d{HH:mm:ss,SS} :: %c{2} :: %n%msg%n%n"/>
+		</Console>
+	</Appenders>
+
+	<loggers>
+		<Logger name="jdbc.sqltiming" level="INFO" additivity="false">
+			<AppenderRef ref="Console"/>
+		</Logger>
+
+		<Root level="ERROR">
+			<AppenderRef ref="Console"/>
+		</Root>
+	</loggers>
+
+</configuration>

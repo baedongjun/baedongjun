@@ -1,0 +1,141 @@
+/*pq-grid에 overriding한 CSS*/
+.pq-theme{
+  font-size: 13px;font-family: "맑은 고딕", 돋움;
+  border : 0px !important;
+  border-top-right-radius : 0px !important;
+  border-top-left-radius : 0px !important;
+}
+.pq-title-span {
+  font-weight: bold;
+}
+.pq-grid-col {
+  text-align: center;
+  background: #656e7d;
+  color: #FFFFFF;
+}
+.pq-grid-col:hover {
+  background: #383e47;
+}
+
+.pq-grid-number-cell{
+  text-align: center;
+  background: #656e7d !important;
+  color: #FFFFFF !important;
+}
+
+.pq-header-outer .pq-cont-inner{
+  background: #656e7d;
+}
+.pq-toolbar{
+  width: 100%;
+	height : 40px;
+  background: #383e47;
+  margin-bottom: 0px;
+  padding: 8px 5px !important;
+  border-spacing: 0px;
+}
+
+.pq-toolbar button{
+  padding: 3px;
+}
+
+.pq-grid-footer{
+  background:#383e47;
+}
+
+.pq-grid-footer button{
+  padding: 3px;
+  min-width:30px !important;
+}
+
+.pq-grid-footer > table > tbody > tr > td{
+  color: #FFFFFF !important;
+}
+.pq-grid-number-cell {
+  text-align: center !important;
+  background: #656e7d;
+  color: #383e47;}
+.pq-theme .ui-button {
+  font-size: 9pt;
+  min-width: 80px;
+}
+.pq-grid-center-o {
+  border-left: 1px solid #c5c5c5;
+  border-right: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.pq-grid-row > .pink {
+  background: pink;
+}
+
+.pq-col-sort-asc, .pq-col-sort-desc {
+  background: #369bcc; !important;
+}
+
+.pq-td-div, .pq-title-span{
+  text-align: center !important;
+}
+
+div.pq-pager input {
+  width: 40px;
+}
+
+/*전체보기 버튼위치*/
+.pq-slider-icon{
+  right: 10px;
+  top:10px;
+}
+
+
+/*pq-gird에서 rowspan 가운데 정렬*/
+.pq-td-div{
+  display: table;
+  height: 100%;
+}
+.pq-title-span{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+
+/* toolbar 버튼 */
+.searchBtnExpand {color:red;font-weight:bold;}
+.searchBtnContract {color:red;font-weight:bold;}
+.searchBtn {padding:3px;font-weight:bold;background: #f0d264;color: #000000;}
+.searchBtnAll {padding:3px;font-weight:bold;background: #cccccc;color: #000000;}
+.excelBtnQuery {float:right;padding:3px;margin-right:50px;font-weight:bold;color:blue}
+.excelBtnNoraml {float:right;padding:3px;margin-right:50px;font-weight:bold}
+
+
+
+/* 테마 bootstrap에서 빠진 것들 */
+.pq-theme .ui-widget-header {
+  background: #ffffff;
+  border-color: #c6c6c6;
+}
+.pq-grid-col {
+  border-color: #d7d7d7;
+}
+.pq-td-border-top > .pq-grid-row > .pq-grid-cell,
+.pq-cont-inner > .pq-td-border-top > .pq-grid-row {
+  border-bottom-color: #d7d7d7;
+}
+.pq-grid-row.pq-striped {
+  background: #f9f9f9;
+}
+
+.pq-grid-row > .pq-grid-number-cell,
+.pq-grid-number-col {
+  border-color: #d7d7d7;
+}
+
+
+
+/*pq grid summanry*/
+.pq-grid-summary-table div {
+  background-color:black;
+  font-weight: bold;
+  color:#FFFFFF;
+}

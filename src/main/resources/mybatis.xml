@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "HTTP://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="true"/>
+		<setting name="multipleResultSetsEnabled" value="true"/>
+		<setting name="jdbcTypeForNull" value="VARCHAR"/> <!-- 쿼리를 위한 파라미터가 varchar일 경우 null을 허용해서 에러를 발생시키지 않는다. -->
+		<setting name="returnInstanceForEmptyRow" value="true"/> <!-- row가 없어 null인지, 실제 null값인지 구분해 줌. -->
+		<setting name="callSettersOnNulls" value="true"/> <!-- 값이 null인 필드인 경우 hashmap으로 불러올 때 누락시키는 것을 방지 -->
+	</settings>
+
+	<typeAliases>
+		<typeAlias alias="batisMap" type="java.util.HashMap" />
+		<typeAlias alias="batisList" type="java.util.LinkedList" />
+		<typeAlias alias="memberDto4" type="com.common.member.MemberDTO4" />
+	</typeAliases>
+</configuration>

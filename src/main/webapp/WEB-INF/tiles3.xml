@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="defaultLayout" template="/layout/default.jsp">
+		<put-attribute name="title" value=":::쁘띠엘린 관리자페이지"/>
+		<put-attribute name="left" value="/layout/left.jsp"/>
+	</definition>
+
+	<definition name="bareLayout" template="/layout/default.jsp">
+		<put-attribute name="title" value=":::쁘띠엘린 관리자페이지"/>
+	</definition>
+
+
+	<!-- 로그인 및 창 페이지 -->
+	<definition name="**.bare" extends="bareLayout">
+		<put-attribute name="content" value="/views/{1}.jsp"/>
+	</definition>
+
+	<!-- 기본 페이지 -->
+	<definition name="**.tiles" extends="defaultLayout">
+		<put-attribute name="content" value="/views/{1}.jsp"/>
+	</definition>
+
+	<!-- pqGrid 사용페이지 -->
+	<definition name="**.pq" extends="defaultLayout">
+		<put-attribute name="include" value="/layout/includePq.jsp"/>
+		<put-attribute name="content" value="/views/{1}.jsp"/>
+	</definition>
+
+</tiles-definitions>

@@ -1,0 +1,124 @@
+
+#fullcalendar {margin-bottom: 20px;}
+
+#dialog {
+	border : solid 2px black;
+	padding:10px;
+}
+
+.fc-day-sun .fc-daygrid-day-number{color: red;}
+.fc-day-sat .fc-daygrid-day-number{color: blue;}
+.fc .fc-toolbar-title {
+  font-weight: bold;font-size: 20pt; vertical-align: middle;margin-left: 10px;margin-right: 10px;
+  letter-spacing: -2px;width: 410px;
+  text-align: center;
+}
+.fc-day-today .fc-daygrid-day-top{font-weight: bold; }
+.fc-daygrid-event {
+  font-size: 13px;
+  font-size: var(--fc-small-font-size, 13px);
+  overflow: hidden;
+}
+.fc-daygrid-dot-event .fc-event-title {font-weight: normal;}
+.fc-toolbar-chunk h2 {display: inline-block;}
+.fc-daygrid-day-number{
+  font-weight:bold;
+  font-size: 11pt;
+  cursor: pointer;
+}
+
+.fc-daygrid-event-harness .fc-event-time {font-weight: bold; color: #0089ff;}
+.fc .fc-list-sticky .fc-list-day > * {background: #656e7d;}
+
+.fc .fc-button-primary {
+  color: #fff;
+  background-color: #6698cb;
+  border-color: #6698cb;
+}
+.fc .fc-button-primary:hover {
+  background-color: #7a90a7;
+}
+.fc-timegrid-event, .fc-timegrid-event .fc-event-time {
+  font-size: 13px;
+  font-size: var(--fc-small-font-size, 13px);
+	line-height:120%;
+  cursor: pointer;
+}
+
+.fc-timegrid-event-condensed .fc-event-title{
+  font-size: 13px;
+  font-size: var(--fc-small-font-size, 13px);
+	line-height:120%;
+}
+
+.fc-event-time{
+  font-weight: bold;
+  margin-bottom: 0px !important;
+}
+.fc-timegrid-slot{
+  cursor: pointer;
+}
+
+.fc-event-main{
+  cursor: pointer;
+}
+.a.fc-event, a.fc-event:hover{
+  cursor: pointer;
+}
+
+/*색깔 그룹등이 필요한곳에서 사용.*/
+.pastel1{background-color: #EEAFAF;border-color: #EEAFAF;}
+.pastel2{background-color: #AFC4E7;border-color: #AFC4E7;}
+.pastel3{background-color: #F3CDA0;border-color: #F3CDA0;}
+.pastel4{background-color: #FFF77E;border-color: #FFF77E;}
+.pastel5{background-color: #ff7b76;border-color: #ff7b76;}
+.pastel6{background-color: #FDC4F8;border-color: #FDC4F8;}
+.pastel7{background-color: #CB9FFD;border-color: #CB9FFD;}
+.pastel8{background-color: #A9E1ED;border-color: #A9E1ED;}
+.pastel9{background-color: #BAE7AF;border-color: #BAE7AF;}
+.pastel10{background-color: #ff5453;border-color: #ff5453;}
+.fc_title{font-weight: bold; text-align: center}
+
+
+
+
+
+/*마우스 오버시 툴팁*/
+ .tooltipevent{
+   width:300px;
+   background:#ffffff;
+   position:absolute;
+   z-index:10001;
+   transform:translate3d(-50%,-100%,0);
+   font-size: 9pt;
+   border: 1px solid #222222;
+ }
+.tooltipevent div{
+  padding:3px 0px 3px 10px;
+}
+.tooltipevent div:first-child{
+  font-weight:bold;
+  background-color:#a9b6cb;
+  border:solid 1px #eaeaea;
+}
+.tooltipevent div:last-child{
+  background-color:#f2f2f2;
+  position:relative;
+}
+.tooltipevent div:last-child::after, .tooltipevent div:last-child::before{
+  width:0;
+  height:0;
+  border:solid 5px transparent;
+  border-bottom:0;
+  border-top-color:whitesmoke;
+  position: absolute;
+  display: block;
+  content: "";
+  bottom:-4px;
+  left:50%;
+  transform:translateX(-50%);
+}
+.tooltipevent div:last-child::before{
+  border-top-color:#888888;
+  bottom:-5px;
+}
