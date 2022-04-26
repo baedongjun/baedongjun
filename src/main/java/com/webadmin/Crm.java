@@ -486,7 +486,7 @@ public class Crm {
 		map.put("divide", request.getParameter("divide"));
 		map.put("yearV", request.getParameter("yearV"));
 		map.put("nowYear", nowYear);
-		map.put("groupname", URLDecoder.decode(request.getParameter("groupnameParam"), "EUC-KR"));
+		map.put("groupname", URLDecoder.decode(request.getParameter("groupnameParam"), "UTF-8"));
 
 		List<String> dbField = new ArrayList<>();
 		List<String> cellName = new ArrayList<>();

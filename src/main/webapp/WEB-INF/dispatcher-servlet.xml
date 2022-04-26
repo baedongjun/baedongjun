@@ -63,7 +63,7 @@
 		<property name="maxUploadSizePerFile" value="10485760"/> <!--1M = 1,048,576byte-->
 		<property name="maxUploadSize" value="52428800"/>
 		<property name="uploadTempDir" ref="uploadDirResource"/>
-		<property name="defaultEncoding" value="EUC-KR"/>
+		<property name="defaultEncoding" value="UTF-8"/>
 	</bean>
 	<bean id="uploadDirResource" class="org.springframework.core.io.FileSystemResource">
 		<constructor-arg value="C:/Temp/"/>

@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 
 <!DOCTYPE html>
 <html>
@@ -46,10 +46,10 @@
 		return nowHeight;
 	}
 	$(document).ready(function () {
-		//·Îµù¹Ù ¼û±â±â
+		//ë¡œë”©ë°” ìˆ¨ê¸°ê¸°
 		$.hideLoading({allowHide: true});
 
-		//À©µµ¿ì»çÀÌÁî°¡ º¯°æµÇ¸é height º¯°æ
+		//ìœˆë„ìš°ì‚¬ì´ì¦ˆê°€ ë³€ê²½ë˜ë©´ height ë³€ê²½
 		$(window).resize(function () {
 			if ($("#grid_json_scroll").length>0) {
 				var height = nowHeight()
@@ -57,7 +57,7 @@
 			}
 		});
 
-		//ÇÁ·Î±×·¥ Á¦¸ñ ÀÔ·Â
+		//í”„ë¡œê·¸ë¨ ì œëª© ì…ë ¥
 		if (document.getElementsByClassName("menuSelected").length>0) document.getElementsByName("label_title")[0].innerHTML = document.getElementsByClassName("menuSelected")[0].innerHTML;
 
 		$('input[type="text"]').keydown(function() {
@@ -68,11 +68,11 @@
 
 		if ($("#searchForm").length > 0) {
 			$("#searchForm").find("input").each(function() {
-				// °Ë»ö Á¶°Ç º¯°æ¿©ºÎ È®ÀÎ
+				// ê²€ìƒ‰ ì¡°ê±´ ë³€ê²½ì—¬ë¶€ í™•ì¸
 				$(this).on("change", function() {
 					curPageChange = true;
 				});
-				// ¿£ÅÍ ÀÔ·Â½Ã °Ë»ö Ã³¸®
+				// ì—”í„° ì…ë ¥ì‹œ ê²€ìƒ‰ ì²˜ë¦¬
 				$(this).on("keyup", function() {
 					if(event.keyCode==13) searchV();
 				});

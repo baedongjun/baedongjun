@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 
 
 <link rel="StyleSheet" href="/assets/fixed_js/accordion/accordion.css" type="text/css"/>
@@ -65,14 +65,14 @@
 		     style="cursor:hand;margin-right:5px">
 		<img src="/assets/img/helpFile.jpg" onclick="location.href='/assets/help/adminHELPv1.1.chm'"
 		     style="cursor:hand"
-		     title="�ص���(����) �ٿ�ε��� ����� ȭ���� �ȳ����ǰ�� �ش� ���Ͽ� ���콺 ������ ��ư�� �����ð� �Ӽ��� ���ż� �� �Ʒ� �����ʿ� �ִ� �������� ��ư�� ���� �ֽø� �˴ϴ�.">
+		     title="※도움말(파일) 다운로드후 실행시 화면이 안나오실경우 해당 파일에 마우스 오른쪽 버튼을 누르시고 속성에 들어가셔서 맨 아래 보안쪽에 있는 차단해제 버튼을 눌러 주시면 됩니다.">
 	</div>
 	<div style="margin-bottom:50px">
 
 		<div id='design_div' name='design_div' style='color:white;background-color:#c806a2;border:dotted 3px #c806a2;position:fixed;width:370px;height:70px;text-align:center;display:none;'>
-			<b>������ ��û</b> �����ؼ�
-			<br>���ο� ����� ��ϵǾ����ϴ�.
-			<br>"������ ���� > ���� ��û/����" ���� Ȯ���Ͻñ� �ٶ��ϴ�.
+			<b>디자인 요청</b> 관련해서
+			<br>새로운 댓글이 등록되었습니다.
+			<br>"디자인 전용 > 나의 요청/접수" 에서 확인하시기 바랍니다.
 		</div>
 
 		<script type="text/javascript">
@@ -100,7 +100,7 @@
 			});
 			document.write(accordion);
 
-			// 1�п� �ѹ��� �˸� üũ ȣ��
+			// 1분에 한번씩 알림 체크 호출
 			setInterval(confirm_Design,1000 * 60 * 1);
 
 			function confirm_Design(val) {
@@ -110,7 +110,7 @@
 				if (val=="ini") {
 					processStart = true;
 				}
-				// 1�ð��� 4�о� 3�� ������ üũ
+				// 1시간에 4분씩 3번 나눠서 체크
 				if ((thisMin>=18 && thisMin<=22) || (thisMin>=38 && thisMin<=42) || thisMin>=58 || thisMin<=02) processStart = true;
 
 				if (processStart) {
@@ -135,7 +135,7 @@
 				}
 			}
 
-			//����Ʈ �޴� Ŭ���� �ε���
+			//레프트 메뉴 클릭시 로딩바
 			$(".accordion-group").find("a").each(function() {
 				$(this).on("click", function() {
 					$.showLoading({allowHide: true});

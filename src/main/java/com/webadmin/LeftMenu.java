@@ -211,7 +211,7 @@ public class LeftMenu {
 		paramList.put("member_auth", Common.paramToArray(request.getParameter("admin_member_auth"), "/"));
 		dbConn.recordSet(QUERY_ROOT + ".adminAuthInsert", paramList);
 
-		mv.setViewName("redirect:/views/left_menu/auth_ori?com_sum=" + URLEncoder.encode(request.getParameter("com_sum"), "EUC-KR"));
+		mv.setViewName("redirect:/views/left_menu/auth_ori?com_sum=" + URLEncoder.encode(request.getParameter("com_sum"), "UTF-8"));
 		return mv;
 	}
 
